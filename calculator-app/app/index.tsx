@@ -4,6 +4,7 @@ import { useCalculator } from "@/hooks/useCalculator";
 import { globalStyles } from "@/styles/global-styles";
 import { View } from "react-native";
 import CalculatorButton from "@/components/calculatorButton";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const CalculatorApp = () => {
   const {
@@ -22,7 +23,7 @@ const CalculatorApp = () => {
   } = useCalculator();
 
   return (
-    <View style={globalStyles.calculatorContainer}>
+    <SafeAreaView style={globalStyles.calculatorContainer}>
       {/* Resultados */}
       <View style={{ paddingHorizontal: 30, marginBottom: 20 }}>
         <ThemeText variant="h1">{formula}</ThemeText>
@@ -109,7 +110,7 @@ const CalculatorApp = () => {
           onPress={calculateResult}
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

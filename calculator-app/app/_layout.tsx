@@ -7,6 +7,7 @@ import { useFonts } from "expo-font";
 import { globalStyles } from "@/styles/global-styles";
 
 import * as NavigationBar from "expo-navigation-bar";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const isAndroid = Platform.OS === "android";
 
@@ -24,11 +25,11 @@ const RootLayout = () => {
   }
 
   return (
-    <View style={globalStyles.layoutBackground}>
+    <SafeAreaView style={globalStyles.layoutBackground}>
       <Slot />
 
       <StatusBar style="light" />
-    </View>
+    </SafeAreaView>
   );
 };
 export default RootLayout;

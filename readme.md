@@ -193,3 +193,36 @@ const App = () => {
 ```
 
 ---
+
+## Navegación
+
+Para la navegación se puede usar `expo-router`.
+
+```jsx
+import { Router, Route } from "expo-router";
+import { Home } from "@/screens/Home";
+
+const App = () => {
+  return (
+    <Router>
+      <Route path="/" component={Home} />
+    </Router>
+  );
+};
+```
+
+---
+
+## haptics
+
+Para usar el haptics se puede hacer de la siguiente manera:
+
+```jsx
+import { Haptics } from "expo";
+
+Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+```
+
+Que es un hapitc? Es una vibración que se siente al tocar la pantalla.
+
+---
