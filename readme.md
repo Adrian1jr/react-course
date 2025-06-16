@@ -226,3 +226,35 @@ Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 Que es un hapitc? Es una vibración que se siente al tocar la pantalla.
 
 ---
+
+## Nativewind
+
+Nativewind es una librería que permite usar Tailwind CSS en React Native.
+
+Creo que es lo mejor para manejar los estilos en react native a mi gusto.
+
+## colores personalizados con tailwind
+
+Para personalizar los colores de Tailwind CSS en un proyecto de React Native con Nativewind, puedes crear un archivo de configuración `tailwind.config.js` en la raíz del proyecto. Aquí tienes un ejemplo de cómo configurarlo:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./presentation/**/*.{js,jsx,ts,tsx}",
+  ],
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#4F46E5", // Indigo 600
+        secondary: "#F59E0B", // Amber 500
+        background: "#F3F4F6", // Gray 200
+      },
+    },
+  },
+  plugins: [],
+};
+```
